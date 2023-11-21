@@ -1,6 +1,7 @@
-import { createContext } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
+import { createContext } from "react";
 import { post } from "../utils/https";
+import Notify from "simple-notify";
 
 /* CREANDO CONTEXTO */
 /* 1er -> Creación del contexto */
@@ -13,6 +14,25 @@ const url = 'http://localhost:8080/api/carritos/'
 const CarritoProvider = ( { children} ) => {
     const [ agregarAlCarrito, eliminarDelCarrito, limpiarCarrito, carrito ] = useLocalStorage('carrito', [])
 
+    const notification = (status, title, speed = 300, text = '') => {
+        new Notify({
+            status: status,
+            title: title,
+            text: text,
+            effect: 'fade',
+            speed: speed,
+            customClass: null,
+            customIcon: null,
+            showIcon: true,
+            showCloseButton: true,
+            autoclose: true,
+            autotimeout: 1500,
+            gap: 20,
+            distance: 20,
+            type: 1,
+            position: 'right top'
+          })
+    }
 
     function elProductoEstaEnElCarrito(producto) {
         return carrito.filter(prod => prod.id === producto.id).length
@@ -49,8 +69,10 @@ const CarritoProvider = ( { children} ) => {
             console.log(resultado)
             /* limpieza del localStorage y limpiamos también el estado */
             limpiarCarrito()
+            notification('success', 'La compra se ejerció con éxito!!', 500, 'Muchas gracias por escogernos!!!')
         } catch (error) {
             console.error('Ocurrió un error en guardarCarritoContext()', error)
+            notification('error', 'Ocurrió un error en guardarCarritoContext()', 1000, error)
         }
           
     }

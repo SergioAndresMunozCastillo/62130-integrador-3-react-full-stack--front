@@ -50,7 +50,7 @@ const ProductoProvider = ({children}) => {
         try {
             const productoSavedNuevo = await post(url, productoNuevo)
 
-            if(productoSavedNuevo['errores'].length){
+            if(productoSavedNuevo['errores']){
                 productoSavedNuevo['errores'].forEach(error => {
                     notification('error', 'Error al subir producto', 5000, error.msg)
                 });
@@ -60,6 +60,7 @@ const ProductoProvider = ({children}) => {
             }
         } catch (error) {
             console.error('Falló crearProductoContext', error)
+            notification('error', 'Falló crearProductoContext', 500, error)
         }
     }
 
@@ -69,7 +70,8 @@ const ProductoProvider = ({children}) => {
             const nuevaDB = productos.map(producto => producto.id === productoEditado.id? productoEditado : producto);
             setProductos(nuevaDB)
         } catch (error) {
-            console.error('Falló actualizarProductoContext', error)   
+            notification('error', 'Falló actualizarProductoContext', 500, error)
+            console.error('Falló actualizarProductoContext', error)
         }
     }
 
@@ -81,6 +83,7 @@ const ProductoProvider = ({children}) => {
 
             setProductos(nuevaDB)
         } catch (error) {
+            notification('error', 'Falló eliminarProductoContext', 500, error)
             console.error('Falló eliminarProductoContext', error)
         }
     }

@@ -5,10 +5,12 @@
     overflow: hidden; /* Si el contenido ocupa más espacio que el tamaño del contenedor. Queda oculto */
     &__light-mode{
       background-color: #f3e6d4;
+      background-image: url(../../public/img/noise.png);
     }
   
     &__dark-mode{
       background-color: #333;
+      background-image: url(../../public/img/noise-dark.png);
     }
     text-decoration: none;
     color: inherit;

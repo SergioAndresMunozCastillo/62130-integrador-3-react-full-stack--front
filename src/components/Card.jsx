@@ -2,9 +2,10 @@ import 'simple-notify/dist/simple-notify.min.css'
 import Notify from 'simple-notify'
 import { useContext } from 'react'
 import '../sass/Card.scss'
+import DarkModeContext from '../contexts/DarkModeContext'
 
 const Card = ({ producto, agregarCarritoContext }) => {
-  
+  const {mode} = useContext(DarkModeContext)
   // console.log(producto)
 
   const handleClick = (e) => {
@@ -34,7 +35,7 @@ const Card = ({ producto, agregarCarritoContext }) => {
   }
 
   return (
-    <a className="card" href="#" onClick={handleClick}>
+    <a className={`card card__${mode}-mode`} href="#" onClick={handleClick}>
       <article className="card__article">
         <div className="card__image-container">
           <img className="card__image" src={producto.foto} alt={producto.nombre} />
