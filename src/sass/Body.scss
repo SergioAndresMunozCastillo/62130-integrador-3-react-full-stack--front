@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=EB+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&family=Prata&display=swap');
+
+@import "font-awesome/solid.scss";
+@import "font-awesome/brands.scss";
+/* font-family: 'Abril Fatface', cursive; */
+/* font-family: 'EB Garamond', serif; */
+.section-cards {
+  background-color: #FFF5DB;
+  padding: 1em;
+
+  &__light-mode{
+    background-image: url(../../public/img/noise.png);
+  }
+
+  &__dark-mode{
+    background-image: url(../../public/img/noise-dark.png);
+    color: #f3e6d4
+  }
+
+  &__header {
+    display: inline-block;
+    justify-content: center;
+    /* margin-right: 15%; */
+  }
+
+  &__header > h1{
+    visibility: hidden;
+    width: 100%;
+    font-size: 1.5em;
+    text-align: start;
+  }
+
+  &__header > p{
+    visibility: hidden;
+  }
+
+  &__header > h1::after {
+    visibility: visible;
+    text-align: center;
+    content: 'Columna de productos';
+    }
+
+    @media (max-width: 722px) {
+      &__header > h1::after{
+        visibility:hidden;
+        content: '';
+      }
+  }
+}
+
+.cards-container {
+  &__light-mode{
+    background-image: url(../../public/img/noise.png);
+  }
+
+  &__dark-mode{
+    background-image: url(../../public/img/noise-dark.png);
+    color: #f3e6d4
+  }
+  
+  margin-left: 15%;
+  margin-right: 15%;
+  @media (max-width: 1024px) {
+    & {
+      margin-left: 0;
+      margin-right: 30%;
+    }
+  }
+
+  @media (max-width: 890px){
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    min-height: 360vh;
+    margin-left: 17%;
+    margin-right: 0;
+    overflow: scroll;
+  }
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 0.5em;
+  justify-content: flex-start;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(5, auto);
+	grid-gap: 0px;
+  height: 1200px;
+}
+
+.rooter{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  &__font-prata{
+    font-family: 'Prata', serif;
+  }
+
+  &__font-abril{
+    font-family: 'Abril Fatface', cursive;
+  }
+
+  &__font-eb{
+    font-family: 'EB Garamond', serif;
+  }
+
+  &__light-mode{
+    background-image: url(../../public/img/noise.png);
+  }
+
+  &__dark-mode{
+    background-image: url(../../public/img/noise-dark.png);
+  }
+}
+
+.contact-section{
+  display: flex;
+  justify-content: space-around;
+  &__form-container{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.contact-form{
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  margin-bottom: 1em;
+  border-radius: 10px;
+}
+
+.contact-form button{
+  align-self: center;
+  background-color: #f75d33;
+  color: #333;
+  width: 112px;
+  height: 30px;
+}

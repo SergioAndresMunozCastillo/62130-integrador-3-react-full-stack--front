@@ -1,0 +1,76 @@
+.main-footer{
+    display: flex;
+    flex-direction: column;
+    
+    &__light-mode{
+        color: #2B1023;
+      }
+    
+      &__dark-mode{
+        color: #f3e6d4;
+      }
+}
+
+.ribbon{
+    height: 3.5em;
+
+    &__light-mode{
+        background-color: #333;
+      }
+    
+      &__dark-mode{
+        background-color: #f3e6d4;
+      }
+}
+
+.subs{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    &__title{
+        flex-basis: 50%;
+    }
+
+    &__news-form{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 50%;
+        justify-content: center;
+    }
+
+    &__news-form_text{
+        border-radius: 12px;
+        align-self: center;
+        width: 87%;
+        margin-bottom: 1em;
+        padding-top: 1em;
+        font-size: 2em;
+        text-align: center;
+    }
+
+    &__news-form_submit{
+        border-radius: 12px;
+        align-self: center;
+        background-color: #f75d33;
+        color: #333;
+        width: 112px;
+        height: 30px;
+    }
+}
+
+.rights{
+    display: flex;
+    justify-content: space-around;
+    border-top: 3px solid #333;
+    padding-top: 1em;
+}
+
+.contact-footer{
+    background-color: #333;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    color: #FFF5DB;
+    text-align: center;
+}
