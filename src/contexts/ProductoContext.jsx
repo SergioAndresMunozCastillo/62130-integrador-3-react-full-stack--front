@@ -5,8 +5,8 @@ import Notify from 'simple-notify';
 const ProductoContext = createContext();
 
 /* const url = "https://652c7cded0d1df5273ef714c.mockapi.io/productos/"; */
-const url = 'http://localhost:8080/api/productos/';
-
+/* const url = 'http://localhost:8080/api/productos/'; */
+const url = 'https://integrador-full-stack-etapa-3.onrender.com/productos/';
 
 const ProductoProvider = ({children}) => {
     const [productos, setProductos] = useState(null)
