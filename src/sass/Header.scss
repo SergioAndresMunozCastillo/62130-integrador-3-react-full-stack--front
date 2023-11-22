@@ -190,9 +190,44 @@ body{
       }
     }
 
+    @media (max-width: 1550px){
+      &__form-container {
+        width: 64%;
+      }
+    }
+
+    @media (max-width: 1500px){
+      &__form-container {
+        width: 63%;
+      }
+    }
+
     @media (max-width: 1430px){
       &__form-container {
         width: 60%;
+      }
+      &__carrito-container {
+        width: 25%;
+      }
+    }
+
+    @media (max-width: 1400px){
+      &__form-container {
+        width: 61%;
+      }
+      
+      &__carrito-container {
+        width: 25%;
+      }
+    }
+
+    @media (max-width: 1350px){
+      &__form-container {
+        width: 59%;
+      }
+      
+      &__carrito-container {
+        width: 25%;
       }
     }
 
@@ -200,17 +235,26 @@ body{
       &__form-container {
         width: 55%;
       }
+      &__carrito-container {
+        width: 30%;
+      }
     }
 
-    @media (max-width: 1400px){
+    @media (max-width: 975px){
       &__form-container {
         width: 50%;
+      }
+      &__carrito-container {
+        width: 30%;
       }
     }
 
     @media (max-width: 890px){
       &__form-container {
-        width: 43%;
+        width: 47%;
+      }
+      &__carrito-container {
+        width: 25%;
       }
     }
 
@@ -218,11 +262,14 @@ body{
       &__form-container {
         width: 35%;
       }
+      &__carrito-container {
+        width: 25%;
+      }
     }
 
     @media (max-width: 730px){
       &__form-container {
-        width: 20%;
+        width: 45%;
       }
       &__dark-mode-container{
         width: 20%;
@@ -233,9 +280,26 @@ body{
       }
     }
   
+    @media (max-width: 540px){
+      &__form-container {
+        width: 42%;
+      }
+      &__carrito-container {
+        width: 25%;
+      }
+    }
+
     @media (max-width: 479px){
       &__form-container {
-        width: 70%;
+        width: 55%;
+      }
+
+      &__dark-mode-container{
+        width: 0%;
+      }
+
+      &__carrito-container {
+        width: 25%;
       }
     }
   
@@ -263,7 +327,7 @@ body{
       justify-content: center;
       align-items: center;
       background-color: #333;
-      width: 10%;
+      width: 16%;
       height: auto;
       order: 2;
       color: transparent;

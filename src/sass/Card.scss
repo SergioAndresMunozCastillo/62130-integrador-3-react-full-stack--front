@@ -27,6 +27,7 @@
       transition: transform 0.25s ease;
     }
     &:hover{
+      color: #333;
       border: solid 2px black;
       background: rgb(251,195,87);
       background: radial-gradient(circle, rgba(251,195,87,0.6979166666666667) 34%, rgba(252,146,42,0.7147233893557423) 45%, rgba(245,103,17,0.7371323529411764) 73%);

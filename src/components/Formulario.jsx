@@ -50,11 +50,9 @@ const Formulario = ({ productoAEditar, setProductoAEditar }) => {
     }
 
     const handleReset = () => {
-        const handleReset = ()  => {
-          setForm(formInicial)
-          setProductoAEditar(null)
-          setSrcImagen('')
-        }
+      setForm(formInicial)
+      setProductoAEditar(null)
+      setSrcImagen('')
     }
 
     return (
