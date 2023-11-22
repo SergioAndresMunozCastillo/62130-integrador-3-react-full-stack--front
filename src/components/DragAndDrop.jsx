@@ -47,7 +47,7 @@ const DragAndDrop = ({setFoto, setSrcImagen, srcImagen}) => {
             console.log("The facts")
             console.log(file)
             formData.append('foto', file)
-            const imageUp = await post('http://localhost:8080/api/upload', formData);
+            const imageUp = await post('https://integrador-full-stack-etapa-3.onrender.com/api/upload', formData);
             setFoto(imageUp)
         } catch (error) {
             console.log(error)
